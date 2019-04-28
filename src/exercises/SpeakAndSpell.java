@@ -1,5 +1,7 @@
 package exercises;
 
+import javax.swing.JOptionPane;
+
 import voce.SpeechSynthesizer;
 
 /**
@@ -14,18 +16,50 @@ import voce.SpeechSynthesizer;
 public class SpeakAndSpell {
 
 	public static void main(String[] args) {
-		// 1. Use the speak method to say the word. "e.g. spell mandlebrot"
 
-		// 2. Catch the user's answer in a String
-
-		// 3. If the user spelled the word correctly, speak "correct"
-
-		// 4. Otherwise say "wrong"
-
-		// 5. Repeat the process for other words
+		int score = 0;
+		speak("mandelbrot");
 		
-		// 6. Calculate the user's score and give it to them at the end of the game 
-		
+		String answer = JOptionPane.showInputDialog("Spell the word: ");
+		if (answer.contains("mandelbrot")) {
+			speak("correct");
+			score++;
+		} else {
+			speak("wrong");
+			score--;
+		}
+		speak("Party");
+	
+		String answer2 = JOptionPane.showInputDialog("Spell the word: ");
+		if (answer2.contains("Party")) {
+			speak("correct");
+			score++;
+		} else {
+			speak("wrong");
+			score--;
+		}
+		speak("Popokateptl");
+	
+		String answer3 = JOptionPane.showInputDialog("Spell the word: ");
+		if (answer3.contains("Popokateptl")) {
+			speak("correct");
+			score++;
+		} else {
+			speak("wrong");
+			score--;
+		}
+		speak("Football");
+
+		String answer4 = JOptionPane.showInputDialog("Spell the word: ");
+		if (answer4.contains("Football")) {
+			speak("correct");
+			score++;
+		} else {
+			speak("wrong");
+			score--;
+		}
+
+	
 		
 	}
 
